@@ -7,8 +7,8 @@ function M.get(colors, config)
   return {
     debugPC = { bg = colors.debug_pc },
     debugBreakpoint = { link = "ThemeRedSign" },
-    DapBreakpointSymbol = { fg = colors.red, bg = colors.bg0 },
-    DapStoppedSymbol = { fg = colors.dark_yellow, bg = colors.bg0 },
+    DapBreakpointSymbol = { link = "ThemeRedSign" },
+    DapStoppedSymbol = { link = "ThemeDarkYellowSign" },
     DapUIBreakpointsCurrentLine = { link = "ThemeBlueGreenBold" },
     DapUIBreakpointsDisabledLine = { fg = colors.dim_highlight },
     DapUIBreakpointsInfo = { link = "ThemeBlueGreen" },

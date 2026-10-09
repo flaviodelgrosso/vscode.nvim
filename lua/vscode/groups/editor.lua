@@ -6,6 +6,8 @@ local M = {}
 function M.get(colors, config)
   local bg0 = not config.transparent_mode and colors.bg0 or nil
   local bg_float = not config.transparent_mode and colors.bg_float or nil
+  local bg2 = not config.transparent_mode and colors.bg2 or nil
+  local bg4 = not config.transparent_mode and colors.bg4 or nil
 
   return {
     Normal = { fg = colors.fg1, bg = bg0 },
@@ -36,8 +38,8 @@ function M.get(colors, config)
     CurSearch = { link = "IncSearch" },
     QuickFixLine = { bold = config.bold },
     Underlined = { underline = config.underline },
-    StatusLine = { fg = colors.fg1, bg = colors.bg4 },
-    StatusLineNC = { fg = colors.fg1, bg = config.transparent_mode and colors.bg0 or colors.bg2 },
+    StatusLine = { fg = colors.fg1, bg = bg4 },
+    StatusLineNC = { fg = colors.fg1, bg = bg2 },
     WinBar = { fg = colors.fg1, bg = bg0, bold = config.bold },
     WinBarNC = { fg = colors.fg1, bg = bg0 },
     WinSeparator = { fg = colors.split_dark, bg = bg0 },
@@ -46,8 +48,8 @@ function M.get(colors, config)
     Directory = { link = "ThemeBlue" },
     Title = { bold = config.bold },
     ErrorMsg = { link = "ThemeError" },
-    MoreMsg = { fg = colors.fg1, bg = colors.bg2 },
-    ModeMsg = { fg = colors.fg1, bg = colors.bg2 },
+    MoreMsg = { fg = colors.fg1, bg = bg2 },
+    ModeMsg = { fg = colors.fg1, bg = bg2 },
     Question = { link = "ThemeBlue" },
     WarningMsg = { link = "ThemeWarning" },
     LineNr = { fg = colors.fg4, bg = bg0 },

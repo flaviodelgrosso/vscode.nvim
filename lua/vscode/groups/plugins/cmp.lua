@@ -57,7 +57,7 @@ function M.get(colors, config)
     BlinkCmpKindCopilot = { link = "ThemeBlueGreen" },
     -- nvim-cmp
     CmpItemAbbr = { link = "ThemeFg1" },
-    CmpItemAbbrDeprecated = { fg = colors.cursor_dark, bg = colors.bg_float, strikethrough = config.strikethrough },
+    CmpItemAbbrDeprecated = { fg = colors.cursor_dark, strikethrough = config.strikethrough },
     CmpItemAbbrMatch = { link = "ThemeMediumBlueBold" },
     CmpItemAbbrMatchFuzzy = { link = "ThemeMediumBlueBold" },
     CmpItemMenu = { link = "ThemeFg0" },

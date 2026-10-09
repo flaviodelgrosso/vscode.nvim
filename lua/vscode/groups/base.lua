@@ -71,10 +71,11 @@ function M.get(colors, config)
     ThemeSuccessUnderline = undercurl(colors.success),
     ThemeVioletUnderline = undercurl(colors.violet),
 
-    -- Git signs (vscode.nvim uses the syntax green/yellow/red for gutter signs)
+    -- Gutter signs (git uses the syntax green/yellow/red)
     ThemeGreenSign = sign(colors.green),
     ThemeYellowSign = sign(colors.yellow),
     ThemeRedSign = sign(colors.red),
+    ThemeDarkYellowSign = sign(colors.dark_yellow),
 
     -- Git status
     ThemeGitAdded = { fg = colors.git_added },

@@ -4,6 +4,12 @@ local M = {}
 ---@param config ThemeConfig
 ---@return table<string, HighlightDefinition>
 function M.get(colors, config)
+  local bg0 = not config.transparent_mode and colors.bg0 or nil
+  local bg2 = not config.transparent_mode and colors.bg2 or nil
+  local bg3 = not config.transparent_mode and colors.bg3 or nil
+  local bg4 = not config.transparent_mode and colors.bg4 or nil
+  local bg_left_light = not config.transparent_mode and colors.bg_left_light or nil
+
   return {
     MiniAnimateCursor = { reverse = true, nocombine = true },
     MiniAnimateNormalFloat = { link = "NormalFloat" },
@@ -60,7 +66,7 @@ function M.get(colors, config)
     MiniJump = { link = "Search" },
     MiniJump2dDim = { link = "ThemeGray" },
     MiniJump2dSpot = { fg = colors.dark_yellow, bold = config.bold, nocombine = true },
-    MiniJump2dSpotAhead = { fg = colors.blue_green, bg = colors.bg0, nocombine = true },
+    MiniJump2dSpotAhead = { fg = colors.blue_green, nocombine = true },
     MiniJump2dSpotUnique = { fg = colors.ui_orange, bold = config.bold, nocombine = true },
     MiniMapNormal = { link = "NormalFloat" },
     MiniMapSymbolCount = { link = "Special" },
@@ -92,10 +98,10 @@ function M.get(colors, config)
     MiniStarterItemPrefix = { link = "ThemePink" },
     MiniStarterSection = { link = "ThemeYellowOrange" },
     MiniStarterQuery = { link = "MoreMsg" },
-    MiniStatuslineDevinfo = { fg = colors.fg1, bg = colors.bg_left_light },
-    MiniStatuslineFileinfo = { fg = colors.fg1, bg = colors.bg_left_light },
-    MiniStatuslineFilename = { fg = colors.fg1, bg = colors.bg4 },
-    MiniStatuslineInactive = { fg = colors.fg1, bg = colors.bg2 },
+    MiniStatuslineDevinfo = { fg = colors.fg1, bg = bg_left_light },
+    MiniStatuslineFileinfo = { fg = colors.fg1, bg = bg_left_light },
+    MiniStatuslineFilename = { fg = colors.fg1, bg = bg4 },
+    MiniStatuslineInactive = { fg = colors.fg1, bg = bg2 },
     MiniStatuslineModeCommand = { fg = colors.bg0, bg = colors.light_red, bold = config.bold },
     MiniStatuslineModeInsert = { fg = colors.bg0, bg = colors.light_blue, bold = config.bold },
     MiniStatuslineModeNormal = { fg = colors.bg0, bg = colors.light_green, bold = config.bold },
@@ -103,19 +109,19 @@ function M.get(colors, config)
     MiniStatuslineModeReplace = { fg = colors.bg0, bg = colors.yellow_orange, bold = config.bold },
     MiniStatuslineModeVisual = { fg = colors.bg0, bg = colors.pink, bold = config.bold },
     MiniSurround = { link = "IncSearch" },
-    MiniTablineCurrent = { fg = colors.fg1, bg = colors.bg0, bold = config.bold, reverse = config.invert_tabline },
+    MiniTablineCurrent = { fg = colors.fg1, bg = bg0, bold = config.bold, reverse = config.invert_tabline },
     MiniTablineFill = { link = "TabLineFill" },
-    MiniTablineHidden = { fg = colors.muted, bg = colors.bg3, reverse = config.invert_tabline },
+    MiniTablineHidden = { fg = colors.muted, bg = bg3, reverse = config.invert_tabline },
     MiniTablineModifiedCurrent = {
       fg = colors.yellow_orange,
-      bg = colors.bg0,
+      bg = bg0,
       bold = config.bold,
       reverse = config.invert_tabline,
     },
-    MiniTablineModifiedHidden = { fg = colors.yellow_orange, bg = colors.bg3, reverse = config.invert_tabline },
-    MiniTablineModifiedVisible = { fg = colors.yellow_orange, bg = colors.bg0, reverse = config.invert_tabline },
-    MiniTablineTabpagesection = { fg = colors.fg1, bg = colors.bg3 },
-    MiniTablineVisible = { fg = colors.muted, bg = colors.bg0, reverse = config.invert_tabline },
+    MiniTablineModifiedHidden = { fg = colors.yellow_orange, bg = bg3, reverse = config.invert_tabline },
+    MiniTablineModifiedVisible = { fg = colors.yellow_orange, bg = bg0, reverse = config.invert_tabline },
+    MiniTablineTabpagesection = { fg = colors.fg1, bg = bg3 },
+    MiniTablineVisible = { fg = colors.muted, bg = bg0, reverse = config.invert_tabline },
     MiniTestEmphasis = { bold = config.bold },
     MiniTestFail = { link = "ThemeRedBold" },
     MiniTestPass = { link = "ThemeBlueGreenBold" },

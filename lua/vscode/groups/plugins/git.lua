@@ -4,6 +4,9 @@ local M = {}
 ---@param config ThemeConfig
 ---@return table<string, HighlightDefinition>
 function M.get(colors, config)
+  local bg0 = not config.transparent_mode and colors.bg0 or nil
+  local bg2 = not config.transparent_mode and colors.bg2 or nil
+
   return {
     gitcommitHeader = { link = "ThemeGray" },
     gitcommitOnBranch = { link = "ThemeGray" },
@@ -36,13 +39,13 @@ function M.get(colors, config)
     NeogitWinSeparator = { link = "WinSeparator" },
     NeogitDiffAdd = { fg = colors.git_added, bg = colors.diff_add },
     NeogitDiffAddHighlight = { fg = colors.git_added, bg = colors.diff_add },
-    NeogitDiffContext = { fg = colors.fg0, bg = colors.bg2 },
+    NeogitDiffContext = { fg = colors.fg0, bg = bg2 },
     NeogitDiffContextHighlight = { fg = colors.fg0, bg = colors.bg4 },
     NeogitDiffDelete = { fg = colors.git_deleted, bg = colors.diff_change },
     NeogitDiffDeleteHighlight = { fg = colors.git_deleted, bg = colors.diff_delete },
-    NeogitDiffHeader = { fg = colors.fg3, bg = colors.bg0 },
-    NeogitDiffHeaderHighlight = { fg = colors.fg3, bg = colors.bg0 },
-    NeogitHunkHeader = { fg = colors.git_modified, bg = colors.bg2 },
+    NeogitDiffHeader = { fg = colors.fg3, bg = bg0 },
+    NeogitDiffHeaderHighlight = { fg = colors.fg3, bg = bg0 },
+    NeogitHunkHeader = { fg = colors.git_modified, bg = bg2 },
     NeogitHunkHeaderHighlight = { fg = colors.git_modified, bg = colors.bg4 },
     NeogitDiffAddCursor = { link = "NeogitDiffAddHighlight" },
     NeogitDiffContextCursor = { link = "NeogitDiffContextHighlight" },
