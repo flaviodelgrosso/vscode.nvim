@@ -53,7 +53,6 @@ local palette = {
   context_current = "#707070",
   fold_background = "#202D39",
   suggestion = "#6A6A6A",
-  folder = "#787878",
   debug_pc = "#4C4C19",
   ui_blue = "#084671",
   ui_orange = "#F28B25",

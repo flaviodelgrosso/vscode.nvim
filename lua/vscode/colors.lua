@@ -58,7 +58,6 @@ function M.get(palette, config)
     context_current = p.context_current,
     fold_background = p.fold_background,
     suggestion = p.suggestion,
-    folder = p.folder,
     debug_pc = p.debug_pc,
     ui_blue = p.ui_blue,
     ui_orange = p.ui_orange,
