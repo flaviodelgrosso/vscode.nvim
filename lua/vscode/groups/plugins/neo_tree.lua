@@ -10,7 +10,7 @@ function M.get(colors, config)
     NeoTreeBufferNumber = { link = "ThemeFg4" },
     NeoTreeCursorLine = { link = "CursorLine" },
     NeoTreeDimText = { fg = colors.fg4 },
-    NeoTreeDirectoryIcon = { link = "ThemeBlue" },
+    NeoTreeDirectoryIcon = { fg = colors.folder },
     NeoTreeDirectoryName = { link = "ThemeFg1" },
     NeoTreeDotfile = { link = "ThemeDisabledBlue" },
     NeoTreeFileIcon = { link = "ThemeViolet" },
