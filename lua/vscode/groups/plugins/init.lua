@@ -16,6 +16,7 @@ function M.get(colors, config)
     "vscode.groups.plugins.mini",
     "vscode.groups.plugins.markdown",
     "vscode.groups.plugins.mason",
+    "vscode.groups.plugins.bufferline",
     "vscode.groups.plugins.misc",
   }
   for _, mod in ipairs(plugin_modules) do
